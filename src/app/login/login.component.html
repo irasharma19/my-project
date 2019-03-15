@@ -1,0 +1,55 @@
+
+<div *ngIf="disp1">
+<hr>
+<h1>Welcome to Ira's Bank</h1>
+<hr>
+<hr>
+<br>
+<h2><marquee><font size="20" >Please Login to continue</font></marquee></h2>
+<hr><div><font size="20" >
+<hr><fieldset align="center"><legend>FILL THIS</legend>
+    <h2>
+        <form class="container" [formGroup]="form" (ngSubmit)="onSubmit(form.value)" method="POST">
+      ID:&nbsp; &nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="number" name="username" formControlName="id" placeholder="Enter your id here"  #u1 ><br>
+      Password:   <input type="password" name="password" formControlName="password" #p1 placeholder="Enter the password here"><br>
+      <button type="button" [disabled]="!form.valid" (click)="check(u1.value,p1.value)">SUBMIT</button></form>   
+    
+      </h2>
+</fieldset></font></div>
+<hr>
+<hr></div>
+<div *ngIf="disp2">
+        <h1><font size="20" >Hurray!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</font></h1>
+    <h1><font size="20" >You have been logged in sucessfully!!!!</font></h1>
+      </div>
+      <div *ngIf="disp3"><fieldset align="center">
+            <font size="20" > Are you a New User?<br>
+                 <input type="text" #v1 BackDetails><br>
+                <button type="button" (click)="check2(v1.value)" BackDetails >SIGN UP</button></font></fieldset>
+      </div>
+            <div *ngIf="disp4">
+                    <div *ngIf="disp5">
+                    <h2><marquee><font size="20" >Please Login to continue</font></marquee></h2>
+                    <hr><div><font size="20" >
+                    <hr><fieldset align="center"><legend>FILL THIS</legend>
+                        <h2>
+                            <form class="container" [formGroup]="form2" (ngSubmit)="onSubmit(form2.value)"  method="POST">
+                          ID    :&nbsp; &nbsp;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;  <input type="number" name="password" formControlName="id" #p4 placeholder="Enter your id here"><br>
+                          Password:         &nbsp; &nbsp;      <input type="password" name="password" formControlName="password" #p3 placeholder="Enter your password here"><br>
+                          
+                          Username:    &nbsp;     <input type="text" name="username" formControlName="username" #u1 placeholder="Enter your username here"><br>
+                          
+                        E-Mail ID:                &nbsp; &nbsp;    <input type="text" name="username3" formControlName="email" #u2 placeholder="Enter your E-Mail ID here"><br>
+                         
+                          <input type="submit" value="Login" [disabled]="!form2.valid" (click)="abc(p4.value,p3.value,u1.value,u2.value)" > &nbsp;
+                        <button type="reset">RESET</button></form>    
+                          </h2>
+                    </fieldset></font></div>
+                    <hr>
+                    <hr>
+                  </div>
+                
+                  <div *ngIf="disp6">
+                <h1><font size="20" >Your account has been created sucessfully!!!!</font></h1>
+                </div>
+             

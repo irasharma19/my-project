@@ -1,0 +1,18 @@
+
+  h1{
+    color:hotpink;
+    background-color: black;
+}
+h3{
+  color:hotpink;
+  background-color: black;
+}
+
+
+a:visited
+{
+   color: hotpink;
+}
+a:hover, a:active {
+    background-color: red;
+  }

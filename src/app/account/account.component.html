@@ -1,0 +1,45 @@
+<h1><marquee><font size="20">Please enter the type of account you have-</font></marquee></h1><fieldset align="center"><h1><legend><font size="20"><u>Enter your choice:</u></font></legend></h1>
+	
+
+<h3><font size="20"><select (change)="display(op.value)" #op>
+							
+  <option value="1">SAVINGS ACCOUNT</option>
+  <option value="2">STUDENT ACCOUNT</option>
+  <option value="3">PERSONAL ACCOUNT</option>
+  <option value="4">BUSINESS ACCOUNT</option>
+</select><br> </font></h3>
+</fieldset>
+
+<div [ngSwitch]="option">
+<div *ngSwitchCase="1">
+<h1><font size="2000">
+  Welcome to your savings account. Your balance is $10348575656455785/-
+</font>
+</h1>
+
+
+</div>
+<div *ngSwitchCase="2">
+  <h1><font size="2000">
+    Welcome to your students account.You can have minimum balance of $0. Your balance is $10348575656455785/-
+  </font>
+  </h1>
+
+</div>
+<div *ngSwitchCase="3">
+
+  <h1><font size="2000">
+    Welcome to your Personal account. Your balance is $10348575656455785/-
+  </font>
+  </h1>
+</div>
+<div *ngSwitchCase="4">
+
+  <h1><font size="2000">
+    Welcome to your business account.This account is for official purpose only. Your balance is $10348575656455785/-
+  </font>
+  </h1>
+</div>
+</div>
+
+

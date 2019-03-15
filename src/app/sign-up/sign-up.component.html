@@ -1,0 +1,24 @@
+<div *ngIf="disp1">
+    <h2><marquee><font size="20" >Please Login to continue</font></marquee></h2>
+    <hr><div><font size="20" >
+    <hr><fieldset align="center"><legend>FILL THIS</legend>
+        <h2>
+            <form class="container" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+          First Name : <input type="text" name="username" formControlName="username" #u1><br>
+          Last Name : <input type="text" name="username1" formControlName="username1" #u2><br>
+          Age : <input type="number" name="username3" formControlName="username3" #u1><br>
+          Password:   <input type="password" name="password" formControlName="password" #p3><br>
+          Confirm Password:  <input type="password" name="password1" formControlName="password1" #p4><br>
+          
+          <input type="submit" value="Login" [disabled]="!form.valid" (click)="abc(p3.value,p4.value)" >
+        <button type="reset"></button></form>    
+          </h2>
+    </fieldset></font></div>
+    <hr>
+    <hr>
+  </div>
+
+  <div *ngIf="disp2">
+<h1><font size="20" >Your account has been created sucessfully!!!!</font></h1>
+  </div>
+    

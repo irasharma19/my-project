@@ -1,0 +1,24 @@
+<br><h1><font size="10"><br>We offer these types of loans-</font></h1>
+<hr>
+<h1>Types of loans:<select (change)="display(op.value)" #op>
+							
+							<option value="1">HOME LOAN</option>
+							<option value="2">CAR LOAN</option>
+							<option value="3">PERSONAL LOAN</option>
+							<option value="4">EDUCATION LOAN</option>
+					</select><br></h1>
+     <div [ngSwitch]="option">
+		 <div *ngSwitchCase="1"><app-home-loan></app-home-loan></div>
+		 <div *ngSwitchCase="2"> <app-car-loan></app-car-loan></div>
+		 <div *ngSwitchCase="3"><app-personal-loan></app-personal-loan></div>
+	    <div *ngSwitchCase="4"><app-education-loan></app-education-loan></div>
+     </div>
+	
+
+		 
+		
+ 
+ 
+ 
+ 
+ 

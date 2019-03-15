@@ -1,0 +1,10 @@
+
+<h2><font size="20" ><fieldset align="center">
+ Monthly RD installment to be paid:<input type="number" #v1 placeholder="Enter here "><br>
+ Number of quarters (tenure):<input type="number" #v2 placeholder="Enter here"><br>
+Recurring deposit interest rate:<input type="number" #v3 placeholder="Enter here"><br>
+  <input type="button" (click)="setvalues(v1.value,v2.value,v3.value)" value="CALCULATE">
+  <br>MATURITY: <input type="text" [value]="getEMI()" disabled="true">
+  <hr>
+</fieldset>
+</font></h2>

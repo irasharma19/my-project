@@ -1,0 +1,46 @@
+<h1><marquee><font size="20">Please enter the type of CARD you have-</font></marquee></h1><fieldset align="center"><h1><legend><font size="20"><u>Enter your choice:</u></font></legend></h1>
+	
+
+  <h3><font size="20"><select (change)="display(op.value)" #op>
+                
+    <option value="1">DEBIT CARD</option>
+    <option value="2">CREDIT CARD</option>
+ 
+  </select><br> </font></h3>
+  </fieldset>
+  
+  <div [ngSwitch]="option">
+  <div *ngSwitchCase="1">
+  <h1><font size="2000">
+   
+     Enter your debit card number: <input type="number" placeholder="card number"><br><hr>
+     Enter expiry date: <input type="text" placeholder="expiry date"><br><hr>
+     Enter your CVV: <input type="number" placeholder="CVV"><br><hr>
+     <button type="button" value="SUBMIT">SUBMIT</button>&nbsp;
+       <button type="reset" value="RESET">RESET</button>
+    
+  
+  </font>
+  </h1>
+  
+  
+  </div>
+  <div *ngSwitchCase="2">
+    <h1><font size="2000">
+   
+      Enter your credit card number: <input type="number" placeholder="card number"><br><hr>
+      Enter expiry date: <input type="text" placeholder="expiry date"><br><hr>
+      Enter your CVV: <input type="number" placeholder="CVV"><br><hr>
+      <button type="button" value="SUBMIT">SUBMIT</button>&nbsp;
+        <button type="reset" value="RESET">RESET</button>
+     
+   
+   </font>
+   </h1>
+  
+  </div>
+
+  </div>
+  
+  
+  

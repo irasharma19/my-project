@@ -1,0 +1,7 @@
+<font size="20">
+
+<h2>Enter amount:<input type="number" #v1 placeholder="Please enter amount" ><br>
+  Enter no of years:<input type="number" #v2 placeholder="Please enter years" ><br>
+  Interest rate:<input type="number" value="8" disabled="true" #v3> <input type="button" (click)="setvalues1(v1.value,v2.value,v3.value)" value="CALCULATE EMI">
+<br>EMI: <input type="text" [value]="getEMI1()">
+  <hr></h2></font>
